@@ -1,3 +1,5 @@
+
+
 // array che contiene gli oggetti
 const membri = [
      membroUno = {
@@ -43,20 +45,15 @@ const membri = [
 
 for (let i = 0; i < membri.length; i++) {
     const membro = membri[i];
-
-    // console.log(membro);
-    cicloForIn (membro);
-}
-
-
-// funzione che mi stampa per ogni membro chiave e valore
-function cicloForIn (membro){
-
-    for ( let key in membro){
-        const chiave = membro[key];
-
-        console.log(key);
-        console.log(membro[key]);
-    }
     
+    console.log(membro);
+    // document.getElementById("inserisciTesto").innerHTML += `${membro.nome}  ${ membro.ruolo}  ${ membro.foto}`;
+    nuovoDiv = document.createElement("div");
+    nuovoDiv.innerText += `${membro.nome} ${ membro.ruolo} ${ membro.foto}`;
+    document.querySelector("body").appendChild(nuovoDiv);
 }
+
+
+
+
+
